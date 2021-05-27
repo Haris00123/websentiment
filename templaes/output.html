@@ -1,0 +1,26 @@
+{% block head %}
+<h1 style="text-align:center">Marketing Analyzer</h1>
+<h3 style="text-align:center">Thank you for using "Market Analyzer"</h3>
+<h5 style="text-align:center">An open source sentiment analyzer</h5>
+<h6 style="text-align:center">Haris Masood</h6>
+{% endblock %}
+{% block body %}
+<div="content">
+    <div="return">
+        <a href="/"><p style="text-align:center">Run another query?</p></a>
+    </div>
+    <br>
+    <div="result_summary">
+        <center>In total, the program found {{total_articles}} articles, out of these {{articles_of_interest}} where identified as relevant.</center>
+    </div>
+    <br>
+    <div="graph">
+        <center>Keywords that returned fewer than 5 articles did not have enough data to be included in the graph, they are still present in the export.</center>
+        <br>
+        <center><img src={{source}} alt="Sentiment Graph"></img></center>
+    </div>
+    </div class="download_form" style="text-align:center">
+      <a href="/getPlotCSV"><p style = "text-align:center">Dowload result CSV</p   ></a>
+    </div>
+</div>
+{% endblock %}
